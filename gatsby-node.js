@@ -1,13 +1,13 @@
 const axios = require("axios")
-
+// const POW_TUBE_IDS_RED_STRING = [ "UGq8cnNTbwI", "eRTJPIa39a4" ]
 const POW_TUBE_ID = "UGq8cnNTbwI"
+
 async function bakeOneNodeGetOneVideo({actions, createContentDigest}) {
     const oembedVideo = await axios.get("https://www.youtube.com/oembed",
     {params: {
         url: `https://youtu.be/${POW_TUBE_ID}`,
         maxwidth: 1554
     }})
-
     actions.createNode({
         ...oembedVideo,
         id: POW_TUBE_ID,

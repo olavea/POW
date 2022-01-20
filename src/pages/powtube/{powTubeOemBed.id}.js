@@ -3,7 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import VideoLayout from "../../components/video-layout";
 
-//              E. EmbedOneVideoPage
+//              E. EmbedVideoPage
 export default function EmbedOneVideoPage({ data }) {
   return <VideoLayout {...data.youTubeEmbed.data} />;
 };
