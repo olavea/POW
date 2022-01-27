@@ -1,6 +1,7 @@
 // POW!-site/gatsby-node.js
 const ID_GiGGLES = `eRTJPIa39a4`;
 const axios = require("axios");
+const { createFilePath } = require("gatsby-source-filesystem");
 
 async function prepPugNode({ actions, createNodeId, createContentDigest }) {
   const { data } = await axios.get("https://www.youtube.com/oembed", {
@@ -77,10 +78,37 @@ async function bakePOWsitePagesFromMarkdown({ graphql, actions }) {
   });
 }
 
+async function prepPOWmarkdownNode({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) {
+  actions.createNode({
+    id: createNodeId(`md-`),
+    internal: {
+      contentDigest: createContentDigest(),
+      type: `MarkdownRemar`,
+    },
+  });
+}
+
 exports.sourceNodes = async (params) => {
   await Promise.all([prepPugNode(params)]);
 };
 
 exports.createPages = async (params) => {
   await Promise.all([bakePOWsitePagesFromMarkdown(params)]);
+};
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === "MarkdownRemark") {
+    const slug = createFilePath({ node, getNode });
+    createNodeField({
+      name: "slug",
+      node,
+      value: slug,
+    });
+  }
 };

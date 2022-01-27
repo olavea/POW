@@ -12,24 +12,23 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "images",
+    //     path: "./src/images/",
+    //   },
+    //   __key: "images",
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
+        name: "parrot-pages",
         path: "./src/pages/",
       },
-      __key: "pages",
+      __key: "parrot-pages",
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -38,6 +37,17 @@ module.exports = {
         path: "./content/olavea-emails/",
       },
       __key: "content",
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {},
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `pages`,
+        path: `${__dirname}/content/`,
+      },
     },
   ],
 };
