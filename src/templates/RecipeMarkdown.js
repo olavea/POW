@@ -1,7 +1,6 @@
 import { graphql } from "gatsby";
 import React from "react";
-//supplies:
-//{data.supplies.id}
+
 export default function SingleGingerBreadPage({ data }) {
   console.log(data);
   return (
