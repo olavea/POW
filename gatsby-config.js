@@ -30,14 +30,14 @@ module.exports = {
       },
       __key: "parrot-pages",
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "content",
-        path: "./content/olavea-emails/",
-      },
-      __key: "content",
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "content",
+    //     path: "./content/olavea-emails/",
+    //   },
+    //   __key: "content",
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {},

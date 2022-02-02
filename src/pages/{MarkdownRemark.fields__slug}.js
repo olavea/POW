@@ -1,26 +1,75 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const sectionsForPOWpage = ({ data }) => (
-  <pre>{JSON.stringify(data, null, 4)}</pre>
-);
+// import { PageLayout } from "../ui-elements/page-layout/PageLayout"
+// 13 <PageLayout title={title}>
+// import { Claim } from "../ui-elements/claim/Claim"
+// 31 {custom === "claim" && <Claim />}
+const ComponentName = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
+  const { title, sections } = frontmatter;
+
+  return (
+    <>
+      {(sections || []).map((section, index) => {
+        const { title, plain, custom, img } = section;
+        const { html } = section.md?.childMarkdownRemark || {};
+        const image = getImage(img?.file);
+
+        console.log(img);
+
+        return (
+          <section key={index} className="container">
+            {title && <h2>{title}</h2>}
+            {image && (
+              <GatsbyImage
+                class="border border-warning mb-4"
+                image={image}
+                alt={img?.alt}
+              />
+            )}
+
+            {plain && (
+              <div>
+                <p class="lead">{plain}</p>
+              </div>
+            )}
+            {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
+          </section>
+        );
+      })}
+    </>
+  );
+};
 
 export const query = graphql`
   query($id: String) {
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
-      }
-      html
-      fields {
-        slug
+        sections {
+          custom
+          plain
+          title
+          img {
+            file {
+              childImageSharp {
+                gatsbyImageData(width: 1200)
+              }
+            }
+            alt
+          }
+          md {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
       }
     }
   }
 `;
 
-export default sectionsForPOWpage;
-// POW! website / src / pages / {markdownRemark.frontmatter.title}.js
-// POW! website / src / pages / {MarkdownFile.fields__slug}.js
-// export default function sectionsForPOWpage() {
-// }
+export default ComponentName;

@@ -1,4 +1,3 @@
-Your personal cycle
 Am I often exhausted on this day in my cycle? Was it this exact day last cycle I also wanted a divorce? When should I book those sales meetings?
 
 ### Knowledge is power!

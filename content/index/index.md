@@ -1,8 +1,15 @@
 ---
-
-title: Your personal cycle
-
-
+sections:
+  - custom: claim
+  - title: Your personal cycle
+    md: ./_section1.md
+    img:
+      file: ./icon.png
+      alt: The Gatsby logo, but later the POW! logo
+  - title: Section 2
+    plain: A one liner!!!!
+  - title: About us
+    md: ../about.md
 
 ---
 Am I often exhausted on this day in my cycle? Was it this exact day last cycle I also wanted a divorce? When should I book those sales meetings?

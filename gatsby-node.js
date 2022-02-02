@@ -87,7 +87,7 @@ async function prepPOWmarkdownNode({
     id: createNodeId(`md-`),
     internal: {
       contentDigest: createContentDigest(),
-      type: `MarkdownRemar`,
+      type: `MarkdownRemark`,
     },
   });
 }
