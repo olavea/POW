@@ -1,3 +1,4 @@
+// POW!-website / pages / {MarkdownRemark.fields__slug}.js
 import React from "react";
 import { graphql, Link } from "gatsby";
 
@@ -14,12 +15,12 @@ const ComponentName = ({ data }) => {
         {(sections || []).map((section) => {
           const { title } = section;
           const { html } = section.body.childMarkdownRemark;
-          const { path, label } = section.cta;
+          const { path, label } = section.cta || [];
           return (
             <section>
               <h2>{title}</h2>
               <div dangerouslySetInnerHTML={{ __html: html }} />
-              <Link to={path}>{label}</Link>
+              {path && <Link to={path}>{label}</Link>}
             </section>
           );
         })}
