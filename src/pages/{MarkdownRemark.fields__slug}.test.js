@@ -73,6 +73,14 @@ describe("Markdown Page", () => {
         expect(section0h2.props.children).toContain("Basic section");
       });
 
+      it("has no empty h2 for missing section title", () => {
+        const checkForH2InSection4 = () => {
+          sections[4].findByType("h2");
+        };
+
+        expect(checkForH2InSection4).toThrow();
+      });
+
       it("adds link for section cta", () => {
         const section0cta = sections[0].findByType("a");
 
