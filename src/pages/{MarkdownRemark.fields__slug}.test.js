@@ -52,6 +52,15 @@ describe("Markdown Page", () => {
                     },
                   },
                 },
+                {
+                  title: "Form section",
+                  subtitle: "Form section subtitle",
+                  form: "newsletter",
+                },
+                {
+                  title: "Form section with invalid form and no subtitle",
+                  form: "invalid",
+                },
               ],
             },
           },
@@ -63,7 +72,7 @@ describe("Markdown Page", () => {
 
     describe("semantic html", () => {
       it("renders all sections", () => {
-        expect(sections.length).toBe(5);
+        expect(sections.length).toBe(7);
       });
 
       it("uses h2 for section title", () => {
@@ -71,6 +80,21 @@ describe("Markdown Page", () => {
 
         expect(section0h2).toBeDefined();
         expect(section0h2.props.children).toContain("Basic section");
+      });
+
+      it("uses p for section subtitle", () => {
+        const section5paragraph = sections[5].findByType("p");
+
+        expect(section5paragraph).toBeDefined();
+        expect(section5paragraph.props.children).toContain("subtitle");
+      });
+
+      it("has no empty p for missing section subtitle", () => {
+        const checkForParagraphInSection6 = () => {
+          sections[6].findByType("p");
+        };
+
+        expect(checkForParagraphInSection6).toThrow();
       });
 
       it("adds link for section cta", () => {
@@ -103,6 +127,21 @@ describe("Markdown Page", () => {
         };
 
         expect(checkForCtaInSection2).toThrow();
+      });
+
+      it("uses Userlist form for newsletter form", () => {
+        const section5paragraph = sections[5].findByType("form");
+
+        expect(section5paragraph).toBeDefined();
+        expect(section5paragraph.props.action).toContain("forms.userlist.com");
+      });
+
+      it("has no empty form for invalid form", () => {
+        const checkForFormInSection6 = () => {
+          sections[6].findByType("form");
+        };
+
+        expect(checkForFormInSection6).toThrow();
       });
     });
   });
