@@ -18,7 +18,7 @@ const MarkdownRemarkPage = ({ data = {} }) => {
 
           return (
             <section key={i}>
-              <h2>{title}</h2>
+              {title && <h2>{title}</h2>}
               {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
               {path && <Link to={path}>{label}</Link>}
             </section>
@@ -30,7 +30,7 @@ const MarkdownRemarkPage = ({ data = {} }) => {
 };
 
 export const query = graphql`
-  query ($id: String) {
+  query($id: String) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
