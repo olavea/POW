@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Use POW!`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "POW!",
+    titleTemplate: "%s · The Real Hero",
+    description:
+      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
+    url: "https://www.usepow.app", // No trailing slash allowed!
+    image: "/pow-logo.png", // Path to the image NOT placed in the 'static' folder, in the project's root directory.
+    twitterUsername: "@raae",
   },
   plugins: [
     "gatsby-plugin-image",

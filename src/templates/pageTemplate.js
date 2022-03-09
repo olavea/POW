@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import SEO from "../components/seo";
 
 export default function PageTemplate({ data = {} }) {
   const { frontmatter, html } = data.markdownRemark || {};
@@ -8,6 +9,14 @@ export default function PageTemplate({ data = {} }) {
     event.preventDefault();
     alert("POW! You've got mail 📧 📫");
   }
+  // <SEO
+  //   title={post.frontmatter.title}
+  //   description={post.frontmatter.description || post.excerpt || "nothin’"}
+  //   image={post.frontmatter.image.childImageSharp.sizes.src}
+  //   pathname={post.fields.slug}
+  //   article
+  // />
+
   return (
     <>
       <div className="container">
