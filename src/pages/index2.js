@@ -4,84 +4,10 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import slugify from "@sindresorhus/slugify";
+import InputAdornments from "../components/fake-login";
 
 // styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-};
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-};
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
+// Ola deleted all styles like const pageStyles = {
 
 // data
 
@@ -115,18 +41,19 @@ const IndexPage = ({ data }) => {
     const gatsbyImage = getImage(treasureNode.thumnail);
 
     return (
-      <main style={pageStyles}>
+      <main>
         <title>Home Page</title>
-        <h1 style={headingStyles}>
+        <h1>
           Welcome
           <br />
-          <span style={descriptionStyle}>to the unfinished</span>
+          <span>to the unfinished</span>
           <br />
-          <span style={headingAccentStyles}>POW! website! </span>
+          <span>POW! website! </span>
           <span role="img" aria-label="Partying face emoji">
             🥳
           </span>
         </h1>
+        <InputAdornments />
         <article key={index}>
           <h2>
             <span>{treasureNode.oEmbed.title}</span>
@@ -136,8 +63,8 @@ const IndexPage = ({ data }) => {
           </Link>
         </article>
 
-        <Link style={linkStyle} to="/ahoy/85b336f8-daa6-5e5c-83cb-bc413a334f77">
-          <p style={paragraphStyles}>
+        <Link to="/ahoy/85b336f8-daa6-5e5c-83cb-bc413a334f77">
+          <p>
             Click the image to see the video where Queen @raae tells her story
             about POW!
             <br />
@@ -146,8 +73,8 @@ const IndexPage = ({ data }) => {
             </span>
           </p>
         </Link>
-        <h5 style={headingAccentStyles}>
-          <p style={paragraphStyles}>
+        <h5>
+          <p>
             Made with
             <span role="img" aria-label="TV emoji">
               💜

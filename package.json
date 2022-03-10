@@ -16,6 +16,9 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@mui/icons-material": "^5.5.0",
+    "@mui/material": "^5.5.0",
+    "@raae/gatsby-theme-mui": "^0.1.0",
     "@sindresorhus/slugify": "^2.1.0",
     "axios": "^0.25.0",
     "gatsby": "^4.5.3",

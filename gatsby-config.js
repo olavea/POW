@@ -54,5 +54,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {},
     },
+    `@raae/gatsby-theme-mui`,
   ],
 };
