@@ -17,7 +17,7 @@ async function slugifyMarkdownRemarkNode(gatsbyUtils) {
 
 // POW!-website/gatsby-node.js
 
-// 1.2.3 – A.B.C. – Gingerbread house
+// 1.2.3 – A.B.C. – Ruby's TimeShip
 // 0. gatsbyUtils 🔧
 async function bakeMarkdownNodesIntoPages(gatsbyUtils) {
   const { graphql, actions, reporter } = gatsbyUtils;
@@ -39,11 +39,13 @@ async function bakeMarkdownNodesIntoPages(gatsbyUtils) {
     }
   `);
 
-  // 2. bakingSong 🎵 🦢
+  // 2. buildingSong 🎵 🦢
+  // happy build day to you, focus build day to you
   const bakingSong = require.resolve("./src/templates/pageTemplate.js");
-  // 3. aromaNode 🍰💰
+  // 3. timeNode ⏰ 💰
   // Loop over the supplies.nodes and
-  // for each aromaNode bake a page
+  //
+  // for each yearNode bake a page
   data.supplies.nodes.forEach((aromaNode) => {
     // console.log(aromaNode.fields.slug, "💀📄");
     const aromaNodeSlug = aromaNode.fields.slug;

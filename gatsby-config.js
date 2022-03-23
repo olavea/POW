@@ -40,10 +40,12 @@ module.exports = {
       options: {
         youTubeIdRedStringTreasure: [
           // "UGq8cnNTbwI",
-          // "Bk1jonYPFD4",
-          // "TzJfepDjpzM",
+          "Bk1jonYPFD4",
+          "TzJfepDjpzM",
           "eRTJPIa39a4",
           //  "UGq8cnNTbwI",
+          `kKp7Syxyxnw`,
+          `s2yjFq_wDsE`,
         ],
       },
     },

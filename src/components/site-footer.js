@@ -9,11 +9,7 @@ export const SiteFooter = ({ ...props }) => {
     {
       site {
         footer: siteMetadata {
-          greeting
-          contact {
-            address
-            email
-          }
+          title
         }
       }
     }
