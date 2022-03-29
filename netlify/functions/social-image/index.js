@@ -1,4 +1,5 @@
-const { chromium } = require("playwright");
+const playwright = require("playwright-aws-lambda");
+
 const OFFSET_Y = 0;
 const OFFSET_X = 0;
 const IMAGE_WIDTH = 1200;
@@ -30,7 +31,7 @@ exports.handler = async (event) => {
       statusCode: 403,
     };
   } else {
-    const browser = await chromium.launch();
+    const browser = await playwright.launchChromium();
     const page = await browser.newPage({
       viewport: { width: pageWidth, height: pageHeight },
       deviceScaleFactor: 2,
