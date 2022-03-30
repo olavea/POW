@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `POW! — the privacy-first menstrual cycle journal`,
-    siteUrl: `https://usepow.app`,
+    name: "POW!",
+    url: `https://usepow.app`,
+    twitterCreator: "@raae",
+    twitterSite: "",
     contact: {
       email: `hello@usepow.app`,
       address: `Tromsøgata 26, 0565 Oslo, Norway`,
