@@ -2,8 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const { DEPLOY_URL } = process.env;
-
 const Seo = ({
   location,
   title,
@@ -13,7 +11,6 @@ const Seo = ({
   robots,
   lang,
   children,
-  deployUrl = DEPLOY_URL,
 }) => {
   const {
     site: { siteMetadata },
@@ -24,6 +21,7 @@ const Seo = ({
           siteMetadata {
             name
             url
+            deployUrl
             twitterCreator
             twitterSite
           }
@@ -32,14 +30,14 @@ const Seo = ({
     `
   );
 
-  const url = `${deployUrl}${location.pathname}`;
+  const url = `${siteMetadata.deployUrl}${location.pathname}`;
   const canonical = location && `${siteMetadata.url}${location.pathname}`;
   const siteName = siteMetadata.name;
   const pageLang = lang || "en";
   const pageRobots = robots || "index";
   const socialTitle = title;
   const socialType = type || "website";
-  const socialImage = `${deployUrl}/.netlify/functions/social-image/?url=${url}`;
+  const socialImage = `${siteMetadata.deployUrl}/.netlify/functions/social-image/?url=${url}`;
   const socialDescription = description;
   const twitterSite = siteMetadata.twitterSite;
   const twitterCreator = author || siteMetadata.twitterCreator;

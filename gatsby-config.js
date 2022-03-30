@@ -1,7 +1,13 @@
+const deployUrl =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8000"
+    : "http://localhost:9000";
+
 module.exports = {
   siteMetadata: {
     name: "POW!",
-    url: `https://usepow.app`,
+    url: process.env.URL,
+    deployUrl: process.env.DEPLOY_PRIME_URL || deployUrl,
     twitterCreator: "@raae",
     twitterSite: "",
     contact: {
