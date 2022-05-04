@@ -72,7 +72,7 @@ async function redirectFromLoginToMyUsepowApp(gatsbyUtils) {
     fromPath: "/login/",
     toPath: "https://my.usepow.app/login/",
     isPermanent: true,
-    force: true,
+    redirectInBrowser: true,
   });
 }
 
