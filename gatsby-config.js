@@ -16,6 +16,7 @@ module.exports = {
     },
     greeting: `Made with ❤ <br/>by <a href="https://twitter.com/raae">@raae</a> and family.`,
   },
+  trailingSlash: "always",
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
