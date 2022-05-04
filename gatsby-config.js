@@ -85,5 +85,6 @@ module.exports = {
     {
       resolve: `@raae/gatsby-theme-mui`,
     },
+    "gatsby-plugin-netlify",
   ],
 };

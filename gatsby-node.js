@@ -63,6 +63,16 @@ async function bakeMarkdownNodesIntoPages(gatsbyUtils) {
     reporter.info(`Created page for slug ${aromaNode.fields.slug}`);
   });
 }
+async function redirectFromLoginToMyUsepowApp(gatsbyUtils) {
+  const { actions } = gatsbyUtils;
+  const { createRedirect } = actions;
+  createRedirect({
+    fromPath: "https://www.usepow.app/login",
+    toPath: "https://my.usepow.app",
+    isPermanent: true,
+    force: true,
+  });
+}
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -80,4 +90,5 @@ exports.onCreateNode = async (gatsbyUtils) => {
 
 exports.createPages = async (gatsbyUtils) => {
   await bakeMarkdownNodesIntoPages(gatsbyUtils);
+  await redirectFromLoginToMyUsepowApp(gatsbyUtils);
 };
