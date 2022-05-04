@@ -67,8 +67,10 @@ async function redirectFromLoginToMyUsepowApp(gatsbyUtils) {
   const { actions } = gatsbyUtils;
   const { createRedirect } = actions;
   createRedirect({
-    fromPath: "https://www.usepow.app/login",
-    toPath: "https://my.usepow.app",
+    // need new fromPath: #67
+    // need new login path
+    fromPath: "http://localhost:8000/login",
+    toPath: "https://my.usepow.app/login/",
     isPermanent: true,
     force: true,
   });
