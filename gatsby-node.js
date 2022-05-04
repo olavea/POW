@@ -63,14 +63,22 @@ async function bakeMarkdownNodesIntoPages(gatsbyUtils) {
     reporter.info(`Created page for slug ${aromaNode.fields.slug}`);
   });
 }
-async function redirectFromLoginToMyUsepowApp(gatsbyUtils) {
+async function redirectToMyUsepowApp(gatsbyUtils) {
   const { actions } = gatsbyUtils;
   const { createRedirect } = actions;
   createRedirect({
-    // need new `fromPath:` #67
-    // need new login path
     fromPath: "/login/",
-    toPath: "https://my.usepow.app/login/",
+    // This is correct, this page will check login status.
+    // If user is logged in the app further redirects to "https://my.usepow.app/timeline".
+    // If user is logged out the app further redirects to "https://my.usepow.app/login".
+    toPath: "https://my.usepow.app/",
+    isPermanent: true,
+    redirectInBrowser: true,
+  });
+
+  createRedirect({
+    fromPath: "/signup/",
+    toPath: "https://my.usepow.app/signup",
     isPermanent: true,
     redirectInBrowser: true,
   });
@@ -92,5 +100,5 @@ exports.onCreateNode = async (gatsbyUtils) => {
 
 exports.createPages = async (gatsbyUtils) => {
   await bakeMarkdownNodesIntoPages(gatsbyUtils);
-  await redirectFromLoginToMyUsepowApp(gatsbyUtils);
+  await redirectToMyUsepowApp(gatsbyUtils);
 };
