@@ -30,7 +30,6 @@ const Seo = ({
     `
   );
 
-  const url = `${siteMetadata.url}${location.pathname}`;
   const canonical =
     location && `${siteMetadata.canonicalUrl}${location.pathname}`;
   const siteName = siteMetadata.name;
@@ -38,11 +37,11 @@ const Seo = ({
   const pageRobots = robots || "index";
   const socialTitle = title;
   const socialType = type || "website";
-  const socialImage = `${siteMetadata.url}/.netlify/functions/social-image/?url=${url}`;
+  const socialImage = `${siteMetadata.url}/logo.jpg`;
   const socialDescription = description;
   const twitterSite = siteMetadata.twitterSite;
   const twitterCreator = author || siteMetadata.twitterCreator;
-  const twitterCard = "summary";
+  const twitterCard = "summary_large_image";
 
   return (
     <Helmet>
