@@ -4,7 +4,7 @@ description: Take charge of your menstrual cycle! Get to know your cycle, using 
 
 sections:
   - title: Take charge of your menstrual cycle!
-    subtitle: Get to know your cycle, using your own words without worrying that the data will end up in the hands of Facebook.
+    subtitle: Get to know your cycle, using your own words, without worrying that the data will end up in the hands of Facebook and the likes.
     cta:
       path: /signup
       label: Get started
@@ -29,7 +29,7 @@ sections:
       path: /signup
       label: Get started
   - title: Not ready to sign up?
-    subtitle: Stay updated by subscribing to our newsletter, no menstruation experience needed ;)
+    subtitle: Learn more about Privacy, Menstrual Health, and POW! by subscribing to our newsletter. No menstruation experience needed ;)
     form: newsletter
   - title: About us
     body: ./about.md
