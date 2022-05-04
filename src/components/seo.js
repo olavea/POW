@@ -30,15 +30,13 @@ const Seo = ({
     `
   );
 
-  const url = `${siteMetadata.url}${location.pathname}`;
-  const canonical =
-    location && `${siteMetadata.canonicalUrl}${location.pathname}`;
+  const canonical = `${siteMetadata.canonicalUrl}${location.pathname}`;
   const siteName = siteMetadata.name;
   const pageLang = lang || "en";
   const pageRobots = robots || "index";
   const socialTitle = title;
   const socialType = type || "website";
-  const socialImage = `${siteMetadata.url}/.netlify/functions/social-image/?url=${url}`;
+  const socialImage = `${siteMetadata.url}/.netlify/functions/social-image/?url=${canonical}`;
   const socialDescription = description;
   const twitterSite = siteMetadata.twitterSite;
   const twitterCreator = author || siteMetadata.twitterCreator;
