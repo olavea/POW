@@ -46,7 +46,7 @@ const Root = styled("div")(({ theme }) => ({
     padding: 0,
 
     li: {
-      margin: "0.25rem 0",
+      margin: "0.5rem 0",
       p: {
         display: "inline",
       },
@@ -55,6 +55,17 @@ const Root = styled("div")(({ theme }) => ({
         display: "inline-block",
         marginRight: "0.5rem",
         color: theme.palette.secondary.main,
+      },
+      "> strong:first-child": {
+        display: "inline-block",
+        marginBottom: "0.25rem",
+      },
+      "&:not(:first-child) > strong:first-child": {
+        marginTop: "1rem",
+      },
+      ">a:last-child": {
+        display: "inline-block",
+        marginTop: "0.5rem",
       },
     },
   },
@@ -77,6 +88,9 @@ const Root = styled("div")(({ theme }) => ({
   },
   code: {
     fontSize: "0.8em !important",
+  },
+  strong: {
+    fontWeight: theme.typography.fontWeightMedium,
   },
   ".gatsby-highlight": {
     marginTop: theme.spacing(3),
