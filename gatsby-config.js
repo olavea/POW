@@ -86,6 +86,13 @@ module.exports = {
     {
       resolve: `@raae/gatsby-theme-mui`,
     },
+    {
+      resolve: `@raae/gatsby-plugin-fathom`,
+      options: {
+        site: "DFGHJDZL",
+        includedDomains: `usepow.app`,
+      },
+    },
     "gatsby-plugin-netlify",
   ],
 };
