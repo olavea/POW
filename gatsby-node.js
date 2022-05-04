@@ -69,7 +69,7 @@ async function redirectFromLoginToMyUsepowApp(gatsbyUtils) {
   createRedirect({
     // need new `fromPath:` #67
     // need new login path
-    fromPath: "http://localhost:8000/login",
+    fromPath: "/login/",
     toPath: "https://my.usepow.app/login/",
     isPermanent: true,
     force: true,
