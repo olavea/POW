@@ -90,7 +90,7 @@ module.exports = {
       resolve: `@raae/gatsby-plugin-fathom`,
       options: {
         site: "DFGHJDZL",
-        includedDomains: `usepow.app`,
+        includedDomains: `www.usepow.app`,
       },
     },
     "gatsby-plugin-netlify",
