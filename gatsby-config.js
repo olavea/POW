@@ -93,6 +93,6 @@ module.exports = {
         includedDomains: `www.usepow.app`,
       },
     },
-    "gatsby-plugin-netlify",
+    "gatsby-plugin-gatsby-cloud",
   ],
 };
