@@ -53,6 +53,7 @@ module.exports = {
           "TzJfepDjpzM", // POW! Focus Friday
           "nS36D2zUkvA", // JSConf Budapest
         ],
+        thumbnailMode: "download",
       },
     },
     {

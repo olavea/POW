@@ -110,7 +110,7 @@ export default function PageTemplate({ data = {}, ...props }) {
                       {videos.map((video, index, { length }) => {
                         const { action, childYouTube } = video;
                         const { title, url } = childYouTube.oEmbed || {};
-                        const { gatsbyImage } = childYouTube.thumbnail || {};
+                        const gatsbyImage = getImage(childYouTube.thumbnail);
                         return (
                           <ImageListItem
                             key={url}
@@ -161,7 +161,7 @@ export default function PageTemplate({ data = {}, ...props }) {
 }
 
 export const query = graphql`
-  query($catsbyId: String) {
+  query ($catsbyId: String) {
     markdownRemark(id: { eq: $catsbyId }) {
       html
       frontmatter {
@@ -194,12 +194,14 @@ export const query = graphql`
                 url
               }
               thumbnail {
-                gatsbyImage(
-                  width: 480
-                  height: 270
-                  fit: COVER
-                  cropFocus: CENTER
-                )
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 480
+                    height: 270
+                    transformOptions: { fit: COVER, cropFocus: CENTER }
+                    aspectRatio: 1.77777778
+                  )
+                }
               }
             }
             action

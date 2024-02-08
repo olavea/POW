@@ -2961,10 +2961,10 @@
   resolved "https://registry.yarnpkg.com/@raae/gatsby-plugin-fathom/-/gatsby-plugin-fathom-0.0.4.tgz#8ba8c5fd077e47de33b85df63573eede94590f39"
   integrity sha512-0VaaOANHr6aqIW0VlMyeqV6K22clJLETcDLwx3i/pD65HWuTcBt4k2AmspCJfmtaHOA5r3SgQVSrxQsjzVsqjQ==
 
-"@raae/gatsby-source-youtube-oembed@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@raae/gatsby-source-youtube-oembed/-/gatsby-source-youtube-oembed-0.3.1.tgz#3ad558ea8b39742bf21ea9e6565252e89e5780bc"
-  integrity sha512-ADXy1NquK/n477/jNDmpR+pxQbGYsthht40PGfAXC5DTkA/6lwrxbnUMI+J5gs/IfXkINkmSjz0R0mOPFc3buQ==
+"@raae/gatsby-source-youtube-oembed@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@raae/gatsby-source-youtube-oembed/-/gatsby-source-youtube-oembed-0.4.0.tgz#5314b4731498e9e103ebff8d9681d4175ebc7871"
+  integrity sha512-VKwsdlJZZZszmZ3YvTUKeE3DT8x3s/Kb5dIgKkv2JaA/YmZJg9o7xvth2Kw4+WgxHxzomPblIOFo3bLZt9ZWBQ==
   dependencies:
     axios "0.25.0"
     gatsby-plugin-utils "3.4.2"

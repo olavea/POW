@@ -19,7 +19,7 @@
     "@mui/icons-material": "5.6.2",
     "@mui/material": "5.6.4",
     "@raae/gatsby-plugin-fathom": "0.0.4",
-    "@raae/gatsby-source-youtube-oembed": "0.3.1",
+    "@raae/gatsby-source-youtube-oembed": "0.4.0",
     "@raae/gatsby-theme-mui": "0.1.1",
     "@sindresorhus/slugify": "2.1.0",
     "axios": "0.27.2",
