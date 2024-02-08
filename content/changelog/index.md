@@ -5,7 +5,7 @@ description: A log of changes made to POW!
 
 ## A log of changes made to POW!
 
-If you would like to follow development work more closely check out [@raae’s You Tube Channel](https://www.youtube.com/channel/UCDlrzlRdM1vGr8nO708KFmQ).
+If you would like to follow development work more closely check out [@raae’s YouTube Channel](https://www.youtube.com/channel/UCDlrzlRdM1vGr8nO708KFmQ).
 
 ### May 23rd - 2021
 
@@ -19,7 +19,7 @@ If you would like to follow development work more closely check out [@raae’s Y
 #### 🐛 Bug Fixes
 
 - **Newsletter forced to opt in**  
-  Users are no longer forced to opt in to the newsletter
+  Users are no longer forced to opt into the newsletter
 
 ### May 19th - 2021
 
@@ -38,7 +38,7 @@ If you would like to follow development work more closely check out [@raae’s Y
 
 #### ⭐ Improvements
 
-- Change password form supports auto complete.
+- Change password form supports auto-complete.
 
 ### May 5th - 2021
 
@@ -57,7 +57,7 @@ If you would like to follow development work more closely check out [@raae’s Y
 #### 🐛 Bug Fixes
 
 - **Timezone issues**  
-  Fixed entries saved on the wrong date in some timezones.
+  Fixed entries saved on the wrong date in some time zones.
 
 ### February 9th - 2021
 
@@ -76,7 +76,7 @@ If you would like to follow development work more closely check out [@raae’s Y
 
 #### ⭐ Improvements
 
-- **Three "Remember me" choices for more fine grained control**  
+- **Three "Remember me" choices **for more **fine-grained** control\*\*\*\*  
   Choose between “Remember me on this device”, “Remember me until I close the browser” and “Do not remember me at all”.  
   📺 [Watch the initial work on YouTube.](https://youtu.be/fLVJitatEmY)
 
@@ -93,13 +93,13 @@ If you would like to follow development work more closely check out [@raae’s Y
 #### ⭐ Improvements
 
 - **Timeline Time Travel**  
-  You may scroll +/- 1,5 cycle in the timeline. This will hopefully soon be replaced by infinite scroll.  
+  You may scroll +/- 1.5 cycles in the timeline. This will hopefully soon be replaced by an infinite scroll.  
   📺 [Watch some exploratory work on YouTube.](https://youtu.be/Q1qfEkHRPXw)
 - **Timeline design**  
   For time travel to make sense the design of the Timeline needed to change. I hope you like it.  
   📺 [Watch the initial work on YouTube.](https://youtu.be/PeWnsLDX6l4)
 - **Tag design within the Timeline**  
-  Tags predicted for the date has a dotted border. Tags logged on the date has a white background. Some will have both if they are both predicted and logged on the date.
+  Tags predicted for the date have a dotted border. Tags logged on the date have a white background. Some will have both if they are both predicted and logged on the date.
 
 ### October 24th - 2020
 
