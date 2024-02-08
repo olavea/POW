@@ -23,7 +23,7 @@
     "@raae/gatsby-theme-mui": "0.1.1",
     "@sindresorhus/slugify": "2.1.0",
     "axios": "0.27.2",
-    "gatsby": "4.13.1",
+    "gatsby": "4",
     "gatsby-plugin-image": "2.13.0",
     "gatsby-plugin-manifest": "4.13.0",
     "gatsby-plugin-netlify": "4.3.1",
